@@ -101,8 +101,18 @@
 
 --14
 
---SELECT CONCAT(e.FirstName, ' ', e.LastName) as FullName, ce.Id AS 'ComputerId'
+--SELECT CONCAT(e.FirstName, ' ', e.LastName) as FullName, ce.Id AS 'EmployeeId'
 --FROM Employee e
 --LEFT JOIN ComputerEmployee ce
---ON e.Id = ce.ComputerId
---WHERE ce.ComputerId IS NULL
+--ON e.Id = ce.EmployeeId
+--WHERE ComputerId IS NULL
+
+--15
+
+--SELECT CONCAT(e.FirstName, ' ', e.LastName) as FullName, ce.Id AS 'ComputerId', COALESCE((c.Manufacturer + ' ' + c.Make), 'N/A') AS 'ComputerInfo'
+--FROM Employee e
+--LEFT JOIN ComputerEmployee ce
+--ON e.Id = ce.EmployeeId
+--LEFT JOIN Computer c
+--ON ce.ComputerId = c.Id
+--WHERE c.DecomissionDate IS NULL
