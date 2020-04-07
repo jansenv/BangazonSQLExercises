@@ -34,3 +34,20 @@
 
 --UPDATE Department
 --SET Budget = Budget * 1.2
+
+--6
+
+--SELECT e.FirstName, e.LastName, et.EmployeeId
+--FROM Employee e
+--LEFT JOIN EmployeeTraining et
+--ON e.Id = et.EmployeeId
+--WHERE et.EmployeeId IS NULL
+
+--7
+
+--SELECT e.FirstName, e.LastName, COUNT(et.Id) AS 'Training Programs Enrolled In'
+--FROM Employee e
+--LEFT JOIN EmployeeTraining et
+--ON e.Id = et.EmployeeId
+--WHERE et.EmployeeId IS NOT NULL
+--GROUP BY e.FirstName, e.LastName
