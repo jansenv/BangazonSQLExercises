@@ -83,6 +83,15 @@
 
 --12
 
+--SELECT TOP 3 tp.Id, COUNT(et.EmployeeId) AS 'Count of Attendees'
+--FROM TrainingProgram tp
+--LEFT JOIN EmployeeTraining et
+--ON tp.Id = et.TrainingProgramId
+--GROUP BY tp.Id
+--ORDER BY Count(et.EmployeeId) DESC;
+
+--13
+
 --SELECT TOP 3 tp.[Name], COUNT(et.EmployeeId) AS 'Count of Attendees'
 --FROM TrainingProgram tp
 --LEFT JOIN EmployeeTraining et
