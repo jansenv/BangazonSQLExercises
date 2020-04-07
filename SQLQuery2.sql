@@ -131,3 +131,15 @@
 --LEFT JOIN ComputerEmployee ce
 --ON e.Id = ce.EmployeeId
 --GROUP BY e.Id, e.FirstName, e.LastName
+
+--18: List the number of customers using each payment type
+
+--19: List the 10 most expensive products and the names of the seller
+
+--20: List the 10 most purchased products and the names of the seller
+
+--21: Find the name of the customer who has made the most purchases
+
+--22: List the amount of total sales by product type
+
+--23: List the total amount made from all sellers
