@@ -9,3 +9,6 @@ ORDER BY [Department Name], LastName, FirstName
 
 --2
 
+SELECT [Name], Budget
+FROM Department
+ORDER BY Budget DESC
