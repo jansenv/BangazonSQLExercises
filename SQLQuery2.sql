@@ -123,3 +123,11 @@
 --FROM Computer
 --WHERE PurchaseDate < '20190701'
 --AND DecomissionDate IS NULL
+
+--17: List all employees along with the total number of computers they have ever had.
+
+--SELECT e.Id, e.FirstName, e.LastName, COUNT(ce.Id) AS 'Computers Used'
+--FROM Employee e
+--LEFT JOIN ComputerEmployee ce
+--ON e.Id = ce.EmployeeId
+--GROUP BY e.Id, e.FirstName, e.LastName
