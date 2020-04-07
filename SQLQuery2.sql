@@ -74,3 +74,9 @@
 --SELECT tp.[Name], tp.StartDate, tp.EndDate
 --FROM TrainingProgram tp
 --WHERE tp.StartDate > GETDATE();
+
+--11
+
+--INSERT INTO EmployeeTraining (EmployeeId, TrainingProgramId) VALUES (3, 3)
+--INSERT INTO EmployeeTraining (EmployeeId, TrainingProgramId) VALUES (4, 3)
+--INSERT INTO EmployeeTraining (EmployeeId, TrainingProgramId) VALUES (5, 3)
