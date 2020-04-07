@@ -1,7 +1,7 @@
 ﻿--1
 
 SELECT d.[Name] AS 'Department Name', emp.LastName, emp.FirstName,
-CASE WHEN emp.IsSupervisor = 1 THEN 'True' else 'False' END AS Supervisor
+CASE WHEN emp.IsSupervisor = 1 THEN 'True' ELSE 'False' END AS Supervisor
 FROM Employee emp
 LEFT JOIN Department d 
 ON emp.DepartmentId = d.Id
@@ -12,3 +12,12 @@ ORDER BY [Department Name], LastName, FirstName
 SELECT [Name], Budget
 FROM Department
 ORDER BY Budget DESC
+
+--3
+
+SELECT d.[Name], emp.FirstName, emp.LastName,
+CASE WHEN emp.IsSupervisor = 1 THEN 'True' ELSE 'False' END AS Supervisor
+FROM Department d
+LEFT JOIN Employee emp
+ON d.Id = emp.DepartmentId
+WHERE emp.IsSupervisor = 1;
