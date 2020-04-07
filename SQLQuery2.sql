@@ -80,3 +80,12 @@
 --INSERT INTO EmployeeTraining (EmployeeId, TrainingProgramId) VALUES (3, 3)
 --INSERT INTO EmployeeTraining (EmployeeId, TrainingProgramId) VALUES (4, 3)
 --INSERT INTO EmployeeTraining (EmployeeId, TrainingProgramId) VALUES (5, 3)
+
+--12
+
+--SELECT TOP 3 tp.[Name], COUNT(et.EmployeeId) AS 'Count of Attendees'
+--FROM TrainingProgram tp
+--LEFT JOIN EmployeeTraining et
+--ON tp.Id = et.TrainingProgramId
+--GROUP BY tp.[Name]
+--ORDER BY Count(et.EmployeeId) DESC;
