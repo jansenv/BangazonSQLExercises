@@ -54,8 +54,23 @@
 
 --8
 
-SELECT tp.[Name], COUNT(et.EmployeeId) AS 'Count of Attendees'
-FROM TrainingProgram tp
-LEFT JOIN EmployeeTraining et
-ON tp.Id = et.TrainingProgramId
-GROUP BY tp.[Name], et.EmployeeId
+--SELECT tp.[Name], COUNT(et.EmployeeId) AS 'Count of Attendees'
+--FROM TrainingProgram tp
+--LEFT JOIN EmployeeTraining et
+--ON tp.Id = et.TrainingProgramId
+--GROUP BY tp.[Name]
+
+--9
+
+--SELECT tp.[Name], COUNT(et.EmployeeId) AS 'Count of Attendees'
+--FROM TrainingProgram tp
+--LEFT JOIN EmployeeTraining et
+--ON tp.Id = et.TrainingProgramId
+--GROUP BY tp.[Name], tp.MaxAttendees
+--HAVING COUNT(et.EmployeeId) = tp.MaxAttendees
+
+--10
+
+--SELECT tp.[Name], tp.StartDate, tp.EndDate
+--FROM TrainingProgram tp
+--WHERE tp.StartDate > GETDATE();
