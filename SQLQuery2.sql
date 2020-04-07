@@ -98,3 +98,11 @@
 --ON tp.Id = et.TrainingProgramId
 --GROUP BY tp.[Name]
 --ORDER BY Count(et.EmployeeId) DESC;
+
+--14
+
+--SELECT CONCAT(e.FirstName, ' ', e.LastName) as FullName, ce.Id AS 'ComputerId'
+--FROM Employee e
+--LEFT JOIN ComputerEmployee ce
+--ON e.Id = ce.ComputerId
+--WHERE ce.ComputerId IS NULL
