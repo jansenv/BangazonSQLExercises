@@ -21,3 +21,11 @@ FROM Department d
 LEFT JOIN Employee emp
 ON d.Id = emp.DepartmentId
 WHERE emp.IsSupervisor = 1;
+
+--4
+
+SELECT COUNT(e.Id) AS 'Count of Employees in Department'
+FROM Employee e
+LEFT JOIN Department d
+ON d.Id = e.DepartmentId
+GROUP BY d.[Name]
