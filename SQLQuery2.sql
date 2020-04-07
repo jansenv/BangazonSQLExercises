@@ -51,3 +51,11 @@
 --ON e.Id = et.EmployeeId
 --WHERE et.EmployeeId IS NOT NULL
 --GROUP BY e.FirstName, e.LastName
+
+--8
+
+SELECT tp.[Name], COUNT(et.EmployeeId) AS 'Count of Attendees'
+FROM TrainingProgram tp
+LEFT JOIN EmployeeTraining et
+ON tp.Id = et.TrainingProgramId
+GROUP BY tp.[Name], et.EmployeeId
